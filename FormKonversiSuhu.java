@@ -50,6 +50,8 @@ public class FormKonversiSuhu extends javax.swing.JFrame {
         Reamur = new javax.swing.JRadioButton();
         Kelvin = new javax.swing.JRadioButton();
         txtOutput = new javax.swing.JLabel();
+        btnKeluar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,8 +98,7 @@ public class FormKonversiSuhu extends javax.swing.JFrame {
             }
         });
 
-        btnKonversi.setBackground(new java.awt.Color(102, 102, 102));
-        btnKonversi.setForeground(new java.awt.Color(255, 255, 255));
+        btnKonversi.setBackground(new java.awt.Color(153, 153, 153));
         btnKonversi.setText("Konversi");
         btnKonversi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,42 +143,60 @@ public class FormKonversiSuhu extends javax.swing.JFrame {
         txtOutput.setForeground(new java.awt.Color(255, 255, 255));
         txtOutput.setText("-");
 
+        btnKeluar.setBackground(new java.awt.Color(204, 0, 0));
+        btnKeluar.setForeground(new java.awt.Color(255, 255, 255));
+        btnKeluar.setText("Keluar");
+        btnKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeluarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setText("Reset");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cbSkala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btnKonversi)
-                                        .addGap(28, 28, 28))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(Fahrenheit)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Reamur))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel3))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtInput, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtOutput))))
-                                .addGap(18, 18, 18)
-                                .addComponent(Kelvin))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(108, 108, 108)
+                            .addComponent(cbSkala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(56, 56, 56)
+                            .addComponent(Fahrenheit)
+                            .addGap(18, 18, 18)
+                            .addComponent(Reamur)
+                            .addGap(18, 18, 18)
+                            .addComponent(Kelvin))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap(59, Short.MAX_VALUE)
+                            .addComponent(jButton1)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnKonversi)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnKeluar))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtInput, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtOutput))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addComponent(jLabel1)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,7 +219,10 @@ public class FormKonversiSuhu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(cbSkala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnKonversi)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnKonversi)
+                    .addComponent(btnKeluar)
+                    .addComponent(jButton1))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -307,6 +329,21 @@ private double konversiSuhu(double nilai, String jenis) {
     }
     }//GEN-LAST:event_KelvinItemStateChanged
 
+    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
+    int confirm = JOptionPane.showConfirmDialog(this, 
+        "Yakin ingin keluar?", "Konfirmasi", 
+        JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        System.exit(0);
+    }        // TODO add your handling code here:
+    }//GEN-LAST:event_btnKeluarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    txtInput.setText("");
+    txtOutput.setText("");
+    txtInput.requestFocus();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -347,6 +384,7 @@ private double konversiSuhu(double nilai, String jenis) {
     private javax.swing.JRadioButton Fahrenheit;
     private javax.swing.JRadioButton Kelvin;
     private javax.swing.JRadioButton Reamur;
+    private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnKonversi;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
@@ -354,6 +392,7 @@ private double konversiSuhu(double nilai, String jenis) {
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JComboBox<String> cbSkala;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
